@@ -1,0 +1,21 @@
+Tests with 1M elements.
+
+Name            Run time            Notes
+----            ------------        ------
+[x]  Counting   0.5 s
+[x]  Merge      4.9 s
+[x]  Quick      1.248 s
+[x]  Radix      0.7 s               Used counting as base sorting.
+
+
+
+100k elements tests (RangeErrors and too slow for 1M elements):
+
+Name            Run time            Notes
+----            ------------        ------
+[x]  Bubble     27+ hours           According to the big O notation (O(n^2))
+[x]  Bucket     0.1 s               100k elements (RangeError)
+[x]  Heap       15.5 s              100k elements (too slow)
+[x]  Insertion  15.2 s              100k elements (too slow)
+[x]  Selection  10.5 s              100k elements (too slow)
+
